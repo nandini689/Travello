@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+<h1>Hello {{name}} Here</h1> 
+{% comment %} this {{}} is dyname so this is the jinja pattern{% endcomment %}
+
+<form action="add" method='post'>
+
+{% csrf_token %}
+    Enter 1st number : <input type="text" name="num1"><br>
+    Enter 2st number : <input type="text" name="num2"><br>
+    <input type="submit">
+</form>
+
+{% endblock  %}
